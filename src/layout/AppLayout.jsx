@@ -9,8 +9,8 @@ import { Outlet, Link } from "react-router-dom";
 
 const AppLayout = () => {
   return (
-    <div style={{ backgroundColor: 'black', color: 'white' }}>
-      <Navbar expand="lg" variant="dark" className="bg-dark" >
+    <div style={{ backgroundColor: 'black', color: 'white', height: '100vh'}}>
+      <Navbar expand="lg" variant="dark" className="navbar-bg" >
         <Container fluid>
           <Navbar.Brand href="#"><img src="https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940" width={100}/></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
