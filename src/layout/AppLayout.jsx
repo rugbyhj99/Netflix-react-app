@@ -5,14 +5,15 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Outlet, Link } from "react-router-dom"; 
+import logoImage from "../netflix.svg"
 
 
 const AppLayout = () => {
   return (
-    <div style={{ backgroundColor: 'black', color: 'white', height: '100vh'}}>
-      <Navbar expand="lg" variant="dark" className="navbar-bg" >
+    <div>
+      <Navbar expand="lg" variant="dark" className="bg-black p-3" >
         <Container fluid>
-          <Navbar.Brand href="#"><img src="https://i.namu.wiki/i/2MGznNg2J3yYCjhBFJBpOj14Sjx0L1zkJcNty3KCsndw54DiXDSNNllYOwSez5ZpJnFP26kWLI9RdgjRzaXi5Q.svg" width={100}  /></Navbar.Brand>
+          <Navbar.Brand href="#"><img src={logoImage} /></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -20,15 +21,15 @@ const AppLayout = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link as={Link} to="/">Home</Nav.Link>
-              <Nav.Link as={Link} to="/movies">Movies</Nav.Link>           
+              <Nav.Link as={Link} to="/" className="custom-nav-link">Home</Nav.Link>
+              <Nav.Link as={Link} to="/movies" className="custom-nav-link">Movies</Nav.Link>           
             </Nav>
             <Form className="d-flex">
               <Form.Control
                 type="search"
                 placeholder="Search"
-                className="me-2"
-                aria-label="Search"                
+                className="me-2 bg-secondary form-click"
+                aria-label="Search"                             
               />
               <Button variant="outline-danger">Search</Button>
             </Form>

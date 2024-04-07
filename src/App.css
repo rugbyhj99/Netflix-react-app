@@ -1,1 +1,7 @@
-.navbar-bg{ background-color: #000000;}
+body{ margin:0; min-height: 100vh; background-color: #000000 !important;}
+.custom-nav-link:hover { color: #f44b4b !important;}
+.form-click:focus {border-color: #f44b4b !important;}
+
+
+
+
