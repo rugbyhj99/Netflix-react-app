@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Outlet, Link } from "react-router-dom"; 
-import logoImage from "../netflix.svg"
+import logo from "./AppLayout.IMG/hjflix.png"
 
 
 const AppLayout = () => {
@@ -13,7 +13,7 @@ const AppLayout = () => {
     <div>
       <Navbar expand="lg" variant="dark" className="bg-black p-3" >
         <Container fluid>
-          <Navbar.Brand href="#"><img src={logoImage} /></Navbar.Brand>
+          <Navbar.Brand href="#"><img src={logo} width={100} /></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
