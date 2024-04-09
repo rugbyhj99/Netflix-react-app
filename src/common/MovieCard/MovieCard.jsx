@@ -17,14 +17,14 @@ export const MovieCard = ({movie}) => {
             </div>
             <div className="overlay-bottom">
                 <div>
-                    <img src={star} width={15} />
+                    <img src={star}/>
                     {movie.vote_average? movie.vote_average.toFixed(1) : null}
                 </div>
                 <div>
-                    <img  src={person} width={15}/>
+                    <img  src={person}/>
                     {movie.popularity}
                 </div>
-                <div>{movie.adult? <img src={ over } width={15}/> : <img src={ under } width={15}/> }</div>
+                <div>{movie.adult? <img src={ over } /> : <img src={ under } /> }</div>
             </div>
         </div>
     </div>
