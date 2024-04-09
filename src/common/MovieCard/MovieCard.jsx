@@ -4,15 +4,27 @@ import star from './MovieCard.IMG/ant-design_star-filled.png';
 import over from './MovieCard.IMG/19age.svg';
 import under from './MovieCard.IMG/all.svg';
 import person from './MovieCard.IMG/Person plus.svg';
+import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
 
-export const MovieCard = ({movie}) => {    
+export const MovieCard = ({movie}) => {
+    const { data:genreData } = useMovieGenreQuery();
+    
+    const showGenre= (genreIdList) => {
+        if (!genreData) return []
+        const genreNameList = genreIdList.map((id)=>{
+            const genreObj = genreData.find((genre)=>genre.id === id)
+            return genreObj.name;
+        });
+        return genreNameList;
+    }
+    
   return (
     <div style={ {background:"url(" + `https://media.themoviedb.org/t/p/w300_and_h450_bestv2${movie.poster_path}` + ")" } } className="movie-card" >
         <div className="overlay">
             <h3 className="ms-2">{movie.title}</h3>
             <div>
             {
-                movie.genre_ids.map( (id) => <span class="badge text-bg-danger ms-2">{id}</span>)
+                showGenre(movie.genre_ids).map( (genre, index) => <span className="badge text-bg-danger ms-2" key={index}>{genre}</span>)
             }
             </div>
             <div className="overlay-bottom">
