@@ -1,2 +1,6 @@
-.movieslider-container { color :  white; padding-left: 100px; padding-right: 100px;}
+.movieslider-container { color :  white; padding-left: 5%; padding-right: 5%;}
 .carousel-container { overflow: hidden; height: 440px; } 
+
+@media screen and (max-width:576px) {
+    .movieslider-container{ padding-left: 2%; padding-right: 2%; }
+    }    
