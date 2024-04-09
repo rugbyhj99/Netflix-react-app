@@ -8,7 +8,7 @@ export const MovieSlider = ( {title, movies, responsive} ) => {
    
   return (
     <div className="movieslider-container">
-        <h3> {title} </h3>
+        <h3 className='movieslider-title'> {title} </h3>
             <Carousel
             infinite={true}
             centerMode={true}

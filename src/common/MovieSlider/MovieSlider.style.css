@@ -1,6 +1,5 @@
-.movieslider-container { color :  white; padding-left: 5%; padding-right: 5%;}
+.movieslider-container { color :  white; }
+.movieslider-title {padding-left: 5%;}
 .carousel-container { overflow: hidden; height: 440px; } 
 
-@media screen and (max-width:576px) {
-    .movieslider-container{ padding-left: 0%; padding-right: 0%; }
-    }    
+
