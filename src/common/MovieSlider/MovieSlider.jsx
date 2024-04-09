@@ -12,7 +12,7 @@ export const MovieSlider = ( {title, movies, responsive} ) => {
             <Carousel
             infinite={true}
             centerMode={true}
-            itemClass='movie-slider'
+            itemClass='movie-slider p-2'
             containerClass="carousel-container"
             responsive={responsive}
             >

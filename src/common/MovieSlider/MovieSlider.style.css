@@ -1,5 +1,5 @@
-.movieslider-container { color :  white; }
+.movieslider-container { color :  white; padding:5% 0; }
 .movieslider-title {padding-left: 5%;}
-.carousel-container { overflow: hidden; height: 440px; } 
+.carousel-container { overflow: hidden;} 
 
 
