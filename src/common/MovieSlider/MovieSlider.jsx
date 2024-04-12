@@ -5,7 +5,15 @@ import { MovieCard }  from '../MovieCard/MovieCard';
 import 'react-multi-carousel/lib/styles.css';
 
 export const MovieSlider = ( {title, movies, responsive} ) => {
-   
+  if (!movies || movies.length === 0) {
+    return (
+      <div className="movieslider-container">
+        <h3 className='movieslider-title'>{title}</h3>
+        <p>No movies available.</p>  // 데이터가 없음을 알리는 메시지
+      </div>
+    );
+  }
+
   return (
     <div className="movieslider-container">
         <h3 className='movieslider-title'> {title} </h3>
@@ -17,7 +25,7 @@ export const MovieSlider = ( {title, movies, responsive} ) => {
             responsive={responsive}
             >
               {
-                  movies.map( (movie, index) => <MovieCard movie={movie} key ={index}/> )
+                  movies?.map( (movie, index) => <MovieCard movie={movie} key ={index}/> )
               }
             </Carousel>
     </div>

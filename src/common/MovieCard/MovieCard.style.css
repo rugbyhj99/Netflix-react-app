@@ -1,8 +1,8 @@
 .movie-card { width: 100%; height: auto;  background-size: cover !important; cursor: pointer; transition: 0.5s ease; border-radius: 10px; aspect-ratio: 300/450; position: relative;}
-.movie-card:hover {transform: scale(1.2) translateZ(20px); z-index: 2; }
+.movie-card:hover {transform: scale(1.1) translateZ(20px); z-index: 2; }
 .overlay { width: 100%; height: 100%; background: rgba(43, 41, 41, 0.7); opacity: 0; transition: all 0.5s ease; color: white; font-weight: bold; overflow-wrap: break-word; display: flex; flex-direction: column; justify-content: center; gap:20px; border-radius: 10px;}
 .overlay:hover { opacity: 1; }
-.overlay-bottom {display: flex; font-size: 0.8rem; gap: 10px; margin-top: 10%; margin-left: 10px; transition: all 0.5s ease; }
+.overlay-bottom {display: flex; font-size: 1.0rem; gap: 10px; margin-top: 10%; margin-left: 10px; transition: all 0.5s ease; }
 .overlay-bottom img { width: 100%; max-width: 15px; }
 
 

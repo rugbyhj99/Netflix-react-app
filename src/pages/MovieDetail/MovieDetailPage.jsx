@@ -1,21 +1,22 @@
 import React from 'react';
-import { Container, Row, Col, Spinner, Alert } from 'react-bootstrap';
+import { Row, Col, Spinner, Alert } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { useMovieDetailQuery } from '../../hooks/useMovieDetail';
 import { useMovieDetailCastsQuery } from '../../hooks/useMovieDetailCasts';
-import MovieDetailPageInfo from './component/MovieDetailPageInfo';
+import { useMovieDetailReviewsQuery } from '../../hooks/useMovieDetailReview';
+import { useMovieDetailRecommendQuery } from '../../hooks/useMovieDetailRecommend.js';
+import MovieDetailPageInfo from "./component/MoiveDetailPageInfo/MovieDetailPageInfo.jsx"
 import "./MovieDetailPage.style.css"
-
-
-
+import MovieDetailReview from './component/MovieDetailReview/MovieDetailReview.jsx';
+import MovieDetailRecommend from './component/MovieDetailRecommend/MovieDetailRecommend.jsx';
 
 
 const MovieDetailPage = () => {
-  const { id } = useParams();
-  console.log("아이디는", id);
-  const {data: movie, isLoading, isError, error} = useMovieDetailQuery( { id } );
-  const {data: creditsData} = useMovieDetailCastsQuery( { id });
-  console.log(movie);
+  const { id } = useParams();  
+  const { data: movie, isLoading, isError, error } = useMovieDetailQuery( { id } );
+  const { data: creditsData } = useMovieDetailCastsQuery( { id } );
+  const { data: review } = useMovieDetailReviewsQuery( { id } );
+  const { data: recommend } = useMovieDetailRecommendQuery( { id } )  
  
   if (isLoading) {
     return (
@@ -29,20 +30,25 @@ const MovieDetailPage = () => {
   }
 
   return (
-    <div className="detail-page">
-      <div className="detail-background" style={{ backgroundImage: `url(https://media.themoviedb.org/t/p/w600_and_h900_bestv2${movie?.backdrop_path})` }}></div>
+    <div className="detail-page">      
       <div className="detail-content">
-        <Container>
+      <div className="detail-background" style={{ backgroundImage: `url(https://media.themoviedb.org/t/p/w600_and_h900_bestv2${movie?.backdrop_path})` }}></div>
+        
           <Row>
             <Col lg={6} xs={12} className="order-2 order-lg-1">
               <MovieDetailPageInfo movie={movie} creditsData={creditsData} />
             </Col>
             <Col lg={6} xs={12} className="detail-content-img-area order-1 order-lg-2">
               <img src={`https://media.themoviedb.org/t/p/w600_and_h900_bestv2${movie?.poster_path}`} className="detail-img" />
-            </Col>
-            
+            </Col>            
           </Row>
-        </Container>
+        
+      </div>
+      <div className="detail-review">
+        <MovieDetailReview review={review}/>
+      </div>
+      <div>
+        <MovieDetailRecommend recommend={recommend}/>
       </div>
     </div>
   )

@@ -1,9 +1,9 @@
 import React from 'react';
 import "./MovieDetailPageInfo.style.css";
-import star from "./images/ant-design_star-filled.png";
-import person from "./images/Person plus.svg";
-import under19 from "./images/all.svg";
-import over19 from "./images/19age.svg"
+import star from "../images/ant-design_star-filled.png";
+import person from "../images/Person plus.svg";
+import under19 from "../images/all.svg";
+import over19 from "../images/19age.svg"
 
 const MovieDetailPageInfo = ( { movie, creditsData } ) => {
     
@@ -53,7 +53,7 @@ const MovieDetailPageInfo = ( { movie, creditsData } ) => {
             }
         </div>
         <div className="detail-info-info2">
-            <div>개봉일: {movie.release_date} </div>
+            <div>개봉일 : {movie.release_date} </div>
             <div>예산 : {movie.budget.toLocaleString()}원</div>
         </div>
         <div>

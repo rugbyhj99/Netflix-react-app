@@ -11,8 +11,7 @@ export const MovieCard = ( {movie} ) => {
     const { data:genreData } = useMovieGenreQuery();
     const navigate = useNavigate();    
    
-    const goToMovieDetail = () => {
-        console.log("무비는", movie);
+    const goToMovieDetail = () => {        
         navigate(`/movies/${movie.id}`)
     }
     
