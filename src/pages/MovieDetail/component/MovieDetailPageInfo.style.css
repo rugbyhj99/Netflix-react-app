@@ -1,0 +1,13 @@
+.font { color: rgba(220, 220, 220, 0.864); font-weight: 600;}
+.detail-info-container { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; height: 100%; width:100%; gap: 3%; }
+.detail-info-container h1 { font-size: 4.0rem; font-weight: 800; color:white;}
+.detail-info-genre { display:flex; gap: 2%; width: 100%; }
+.detail-info-genre div { border: 1px solid rgba(220, 220, 220, 0.864); padding: 0.5% 1.5% 0.5% 1.5% ; border-radius: 5px; font-weight: 700;}
+.detail-info-info1 { display:flex; gap: 7%; width: 100%; font-weight: 700; }
+.detail-info-info1-box { display: flex; gap: 10%;}
+.detail-info-info1 img {width: 25px;  }
+.detail-info-btn { width: 100%; }
+.detail-info-btn button { color:#333; padding: 2% 8% 2% 8%; background-color: white; font-size: 1.5rem; font-weight: 600; border-radius: 5px;  }
+.detail-span-ml { margin-left: 1%;}
+.detail-info-info2 { display:flex; gap: 3%; width: 100%;}
+

@@ -11,6 +11,6 @@ export const useSearchMovieQuery = ( { keyword, page } ) => {
     return useQuery({
         queryKey: [ 'movie-search', keyword, page ],
         queryFn: () => fetchSearchMovie( { keyword, page } ),
-        select : (result)=> result.data,
+        select : (result)=> result.data
     })
 }

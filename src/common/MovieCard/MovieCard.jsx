@@ -5,9 +5,16 @@ import over from './MovieCard.IMG/19age.svg';
 import under from './MovieCard.IMG/all.svg';
 import person from './MovieCard.IMG/Person plus.svg';
 import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
+import { useNavigate } from "react-router-dom"; 
 
-export const MovieCard = ({movie}) => {
+export const MovieCard = ( {movie} ) => {
     const { data:genreData } = useMovieGenreQuery();
+    const navigate = useNavigate();    
+   
+    const goToMovieDetail = () => {
+        console.log("무비는", movie);
+        navigate(`/movies/${movie.id}`)
+    }
     
     const showGenre= (genreIdList) => {
         if (!genreData) return []
@@ -19,7 +26,7 @@ export const MovieCard = ({movie}) => {
     }
     
   return (
-    <div style={ {background:"url(" + `https://media.themoviedb.org/t/p/w300_and_h450_bestv2${movie.poster_path}` + ")" } } className="movie-card" >
+    <div style={ {background:"url(" + `https://media.themoviedb.org/t/p/w300_and_h450_bestv2${movie.poster_path}` + ")" } } className="movie-card" onClick={goToMovieDetail} >
         <div className="overlay">
             <h3 className="ms-2">{movie.title}</h3>
             <div>

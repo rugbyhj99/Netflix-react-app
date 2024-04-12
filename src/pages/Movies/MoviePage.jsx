@@ -17,7 +17,8 @@ const MoviePage = () => {
   const [query, setQuery] = useSearchParams();
   const keyword = query.get("q");
   const [page, setPage] = useState(1);
-  const {data, isLoading, isError, error} = useSearchMovieQuery( { keyword, page } ); 
+  const {data, isLoading, isError, error} = useSearchMovieQuery( { keyword, page } );
+  console.log("서치데이터" , data);
  
   const handlePageClick = ( { selected }) => {
     setPage(selected + 1);  
