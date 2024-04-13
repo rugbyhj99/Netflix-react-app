@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Row, Col, Spinner, Alert } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { useMovieDetailQuery } from '../../hooks/useMovieDetail';
@@ -16,7 +16,7 @@ const MovieDetailPage = () => {
   const { data: movie, isLoading, isError, error } = useMovieDetailQuery( { id } );
   const { data: creditsData } = useMovieDetailCastsQuery( { id } );
   const { data: review } = useMovieDetailReviewsQuery( { id } );
-  const { data: recommend } = useMovieDetailRecommendQuery( { id } )  
+  const { data: recommend } = useMovieDetailRecommendQuery( { id } );  
  
   if (isLoading) {
     return (
@@ -36,7 +36,7 @@ const MovieDetailPage = () => {
         
           <Row>
             <Col lg={6} xs={12} className="order-2 order-lg-1">
-              <MovieDetailPageInfo movie={movie} creditsData={creditsData} />
+              <MovieDetailPageInfo movie={movie} creditsData={creditsData} id={id} />
             </Col>
             <Col lg={6} xs={12} className="detail-content-img-area order-1 order-lg-2">
               <img src={`https://media.themoviedb.org/t/p/w600_and_h900_bestv2${movie?.poster_path}`} className="detail-img" />
