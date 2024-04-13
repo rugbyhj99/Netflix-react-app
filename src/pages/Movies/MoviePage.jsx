@@ -80,7 +80,7 @@ const MoviePage = () => {
   };
 
   return (   
-    <Container className="all-container">
+    <Container>
       <Row>
         <Col lg={3} xs={12}>
           <div className="sort-container">
