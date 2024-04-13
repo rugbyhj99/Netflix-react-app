@@ -12,12 +12,10 @@
     .detail-content-img-area { justify-content: center;}
     .detail-img { width: 300px; padding-bottom: 2%;}
     .detail-content {padding-bottom: 5%; }
-    .detail-content-img-area {padding-bottom: 5%;}
+    .detail-content-img-area {padding-bottom: 5%; margin-bottom: 20px;}
     }
 
-@media screen and (max-width:576px) {
-    .detail-page { font-size: 14px; }
-    }
+
 
 
 

@@ -15,4 +15,8 @@
 .detail-info-info2 { display:flex; gap: 3%; width: 100%;}
 
 
+@media screen and (max-width:992px) {
+    .detail-info-btn button { padding: 1.5% 6% }
+    }
+
 
