@@ -17,8 +17,9 @@
 .genre-button.selected { background-color: red; color: inherit; }
 
 @media screen and (max-width:992px) {
-    .sort-container { height: 100%; }
+    .sort-container { margin-top: 20px;height: 100%; }
     .box-container { margin-bottom: 20px;}
     .pagination { max-width: 300px; }
+    .all-container {width : 100%;}
     }
 
