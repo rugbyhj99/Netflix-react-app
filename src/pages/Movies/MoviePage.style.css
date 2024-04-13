@@ -1,0 +1,24 @@
+.moviepage-container { display: flex; padding-inline: 10%; }
+.moviepage-img { padding: 5%; }
+
+.page-item.active .page-link { background-color: red; color: rgb(0, 0, 0) !important; }
+
+.sort-container{ display: flex; flex-direction: column; align-items: center; justify-content: center;  height: 100vh; gap: 5%;}
+.box-container{ border: 1px solid rgba(220, 220, 220, 0.864); border-radius: 5px; text-align: center; padding: 10px; width: 90%;}
+.box-toggle { cursor: pointer; background-color: #000; color: rgba(220, 220, 220, 0.864);  border-radius: 5px; padding: 10px; transition: background-color 0.3s ease; }
+.box-toggle:hover { background-color: #222; }
+.dropdown-custom { background-color: #000; color: rgba(220, 220, 220, 0.864); border-top: 1px solid white; width: 100%;}
+.dropdown-custom .dropdown-toggle { padding: 10px 20px; background-color: #000; color: rgba(220, 220, 220, 0.864); border: none !important; outline: none !important; box-shadow: none !important; }
+.dropdown-custom .dropdown-menu { background-color: #000; border: none !important; }
+.dropdown-custom .dropdown-item { color: rgba(220, 220, 220, 0.864); padding: 10px 20px; }
+.dropdown-custom .dropdown-item:hover, .dropdown-custom .dropdown-toggle:hover, .dropdown-custom .dropdown-toggle:focus { background-color: #222; color: rgba(220, 220, 220, 0.864); outline: none !important; }
+
+.genre-button { padding: 5px 10px; border-radius: 5px; font-size: 1.0rem; background-color: black; margin: 5px; border: 1px solid rgba(220, 220, 220, 0.864); color: rgba(220, 220, 220, 0.864); font-weight: 700; }
+.genre-button.selected { background-color: red; color: inherit; }
+
+@media screen and (max-width:992px) {
+    .sort-container { height: 100%; }
+    .box-container { margin-bottom: 20px;}
+    .pagination { max-width: 300px; }
+    }
+

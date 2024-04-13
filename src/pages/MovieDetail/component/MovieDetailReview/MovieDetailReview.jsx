@@ -5,8 +5,8 @@ const MovieDetailReview = ( {review} ) => {
     console.log("리뷰데이터는", review );
     const [ expanded, setExpanded ] = useState({});
     const [visibleCount, setVisibleCount] = useState(2);  // 처음에 보여줄 리뷰의 수
-    const handleShowMore = () => {
-        setVisibleCount(review.length);  // 모든 리뷰를 보여주도록 설정
+    const handleToggleReviews = () => {
+        setVisibleCount(prev => prev < review.length ? review.length : 2);  // 전체 리뷰를 보여주거나 기본 수로 토글
     };
 
     const toggleExpand = (index) => {
@@ -21,11 +21,9 @@ const MovieDetailReview = ( {review} ) => {
     <div className="detail-review-container">
         <div className="detail-review-title">
             <h2>Review</h2>
-            {
-                visibleCount < review.length && (
-                    <button onClick={handleShowMore} className="review-box-expandbtn">더보기</button>  
-                )
-            }
+            <button onClick={handleToggleReviews} className="review-box-expandbtn">
+                    {visibleCount < review.length ? '더보기' : '접기'}
+            </button>
         </div>
         {
             review.slice(0, visibleCount).map((review, index) => (
