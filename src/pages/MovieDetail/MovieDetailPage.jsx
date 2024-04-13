@@ -34,7 +34,7 @@ const MovieDetailPage = () => {
       <div className="detail-content">
         <div className="detail-background" style={{ backgroundImage: `url(https://media.themoviedb.org/t/p/w600_and_h900_bestv2${movie?.backdrop_path})` }}></div>
           <Row>
-            <Col lg={6} xs={12} className="order-2 order-lg-1">
+            <Col lg={6} xs={12} className="order-2 order-lg-1 detail-content-text-area">
               <MovieDetailPageInfo movie={movie} creditsData={creditsData} id={id} />
             </Col>
             <Col lg={6} xs={12} className="detail-content-img-area order-1 order-lg-2">
