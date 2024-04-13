@@ -19,7 +19,9 @@
 @media screen and (max-width:992px) {
     .sort-container { margin-top: 20px; height: auto; align-items: flex-start; }
     .box-container { margin-bottom: 20px; width: 100%;}
-    .pagination { width:100%; }    
+    .pagination { max-width:300px !important; } 
+    .page-item { max-width: 20px !important;}   
+    
     .moviepage-img { padding: 2%; /* 이미지 간격을 줄입니다. */ }
     .all-container { overflow-x: hidden;}
     }
