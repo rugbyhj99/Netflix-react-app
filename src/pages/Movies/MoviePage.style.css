@@ -21,5 +21,6 @@
     .box-container { margin-bottom: 20px; width: 100%;}
     .pagination { width:100%; }    
     .moviepage-img { padding: 2%; /* 이미지 간격을 줄입니다. */ }
+    .all-container { overflow-x: hidden;}
     }
 
